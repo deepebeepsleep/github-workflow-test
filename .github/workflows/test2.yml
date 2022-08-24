@@ -11,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo "forked!!"
           VALUE=${{ secrets.SECRET_VALUE }}
           echo ${VALUE:1}
