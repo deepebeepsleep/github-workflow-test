@@ -11,5 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        VALUE=${{ secrets.SECRET_VALUE }}
-        echo ${VALUE:1}
+          VALUE=${{ secrets.SECRET_VALUE }}
+          echo ${VALUE:1}
