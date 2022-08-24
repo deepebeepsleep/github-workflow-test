@@ -1,0 +1,15 @@
+name: test2
+on:
+  workflow_run:
+    workflows:
+      - test
+    types:
+      - completed
+
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+        VALUE=${{ secrets.SECRET_VALUE }}
+        echo ${VALUE:1}
